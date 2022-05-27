@@ -5,12 +5,12 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 nav {
   background-color: white;
   height: 55px;
-  width: 100%;
-  
+  max-width: 100%;
 }
 .log {
   position: relative;
@@ -35,14 +35,20 @@ nav {
   background-color: brown;
   box-shadow: 2px 2px 3px black;
 }
-.title{
-    letter-spacing: 0.5px;
-    font-weight: 900;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    top: 10px;
-    position: relative;
+.title {
+  letter-spacing: 0.5px;
+  font-weight: 900;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  top: 10px;
+  position: relative;
 
-    left: 50px;
+  left: 50px;
+}
+.upper_container {
+  margin-inline: auto;
+
+  max-width: 80%;
 }
 .container_nav {
   margin-inline: auto;
@@ -53,10 +59,32 @@ nav {
   height: fit-content;
 }
 .container {
-  margin-top: 65px;
+  margin-top: 10px;
   background-color: white;
   border-radius: 8px;
   margin-inline: auto;
   max-width: 80%;
   padding: 10px;
+  height: 350px;
+}
+h1 {
+  margin: 15px 0 5px 0;
+}
+footer {
+  margin-top: auto;
+  background-color: rgb(30, 30, 31);
+  max-width: 100%;
+  height: 55px;
+}
+.container_footer {
+  margin-inline: auto;
+  padding: 5px;
+  max-width: 80%;
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+}
+h4{
+    margin: 4px;
+    color: whitesmoke;
 }
