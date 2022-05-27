@@ -67,6 +67,12 @@ nav {
   padding: 10px;
   height: 350px;
 }
+.user{
+    border-radius: 4px;
+    height: 20px;
+    max-width: 95%;
+    background: linear-gradient(to right,white,rgb(216, 216, 216));
+}
 h1 {
   margin: 15px 0 5px 0;
 }
