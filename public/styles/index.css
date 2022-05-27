@@ -10,6 +10,7 @@ nav {
   background-color: white;
   height: 55px;
   width: 100%;
+  
 }
 .log {
   position: relative;
@@ -34,10 +35,22 @@ nav {
   background-color: brown;
   box-shadow: 2px 2px 3px black;
 }
+.title{
+    letter-spacing: 0.5px;
+    font-weight: 900;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    top: 10px;
+    position: relative;
+
+    left: 50px;
+}
 .container_nav {
   margin-inline: auto;
   padding: 5px;
   max-width: 80%;
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
 }
 .container {
   margin-top: 65px;
