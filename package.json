@@ -1,0 +1,19 @@
+{
+  "name": "identityapp",
+  "version": "1.0.0",
+  "description": "Create and retrieve users identities",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NokoDev/IdentityApp.git"
+  },
+  "author": "NokoDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NokoDev/IdentityApp/issues"
+  },
+  "homepage": "https://github.com/NokoDev/IdentityApp#readme"
+}
