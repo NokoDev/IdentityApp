@@ -3,6 +3,7 @@ const app = express()
 const mongoose = require("mongoose")
 const ejs = require("ejs")
 const ejsMate = require("ejs-mate")
+const path = require("path")
 
 
 const Accounts =  require("./modules/user")
@@ -16,12 +17,18 @@ mongoose.connect("mongodb://localhost:27017/UserAccount")
 }).catch(err =>{
     console.log(`Something went wrong: ${error}`)
 })
-app.get("/", (req, res)=>{
-    res.send("welcome world!!")
-})
+
 
 app.engine("ejs", ejsMate)
+app.set("view engine", "ejs")
+app.set("views", path.join(__dirname, "views"))
+app.use(express.static(path.join(__dirname,"public")))
 
+
+
+app.get("/", (req, res)=>{
+    res.render("index")
+})
 
 app.listen(port, () =>{
     console.log("Server started...")
