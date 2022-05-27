@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/NokoDev/IdentityApp/issues"
   },
-  "homepage": "https://github.com/NokoDev/IdentityApp#readme"
+  "homepage": "https://github.com/NokoDev/IdentityApp#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
