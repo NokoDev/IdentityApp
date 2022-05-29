@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../styles/new.css">
     <title>Add New Identity</title>
 </head>
+
 <body>
 
     <nav>
@@ -19,10 +21,37 @@
         </div>
     </nav>
 
+    <h1>Add New Identity</h1>
     <div class="container">
-        
+        <form action="#">
+            <div class="input_div">
+                <label for="cn">Common Name: </label>
+                <input type="text" id="cn">
+            </div>
+            <div class="input_div">
+                <label for="title">Title: </label>
+                <input type="text" id="title"> 
+            </div>
+            <div class="input_div">
+                <label for="company">Company: </label>
+                <input type="text" id="company"> 
+            </div>
+            <div class="input_div">
+                <label for="location">Location: </label>
+                <input type="text" id="location"> 
+            </div>
+            <button type="submit">Add Identity</button>
+        </form>
+        <button id="cancel"><a href="/">Cancel</a></button>
     </div>
 
-    
+    <footer>
+        <div class="container_footer">
+            <h4>NokoDev</h4>
+            <h4>@</h4>
+            <h4>Cyber ProX / 2022</h4>
+        </div>
+    </footer>
 </body>
+
 </html>

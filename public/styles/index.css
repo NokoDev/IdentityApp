@@ -74,6 +74,7 @@ nav {
   max-width: 80%;
   padding: 10px;
   height: 350px;
+  box-shadow: 1px 1px 3px grey;
 }
 
 .user {
@@ -120,4 +121,21 @@ h4 {
   color: whitesmoke;
 }
 
-.user>div {}
+button{
+  margin-top: 12px;
+  margin-inline: auto;
+  width: 95px;
+  background-color: green;
+  border: none;
+  padding: 8px;
+}
+button:hover{
+  box-shadow: 1px 1px 3px grey;
+  border-radius: 4px;
+}
+a{
+  text-decoration: none;
+  color: white;
+  background-color: green;
+  letter-spacing: 1px;
+}
