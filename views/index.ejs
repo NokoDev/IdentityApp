@@ -24,12 +24,21 @@
     <div class="upper_container">
         <h1>Accounts</h1>
         <div class="container">
+            <div class="titles">
+                <div>CN</div>
+                <div>Job Title</div>
+                <div>Company</div>
+                <div>Location</div>
+            </div>
+            <% for(let identity of identities) {%>
             <div class="user">
-                <div>Test</div>
-                <div>Test</div>
-                <div>Test</div>
+                <div><%=identity.cn%></div>
+                <div><%=identity.title%></div>
+                <div><%=identity.company%></div>
+                <div><%=identity.location%></div>
             </div>
             <hr>
+            <%}%>
         </div>
     </div>
     <button><a href="/new">Add New</a></button>
