@@ -9,11 +9,11 @@ const UserSchema = new Schema({
     title: String,
     company: {
         type: String,
-        enum: "CyberArk"
+        // enum: "CyberArk"
     },
     location: {
         type: String,
-        enum: "Gauteng"
+        // enum: "Gauteng"
     },
 
 })
