@@ -23,7 +23,7 @@ app.engine("ejs", ejsMate)
 app.set("view engine", "ejs")
 app.set("views", path.join(__dirname, "views"))
 app.use(express.static(path.join(__dirname,"public")))
-
+app.use(express.urlencoded({extended: true}))
 
 
 app.get("/", (req, res)=>{
@@ -31,7 +31,12 @@ app.get("/", (req, res)=>{
 })
 
 app.get("/new", (req, res) =>{
-    res.send("add new form")
+    res.render("new")
+})
+
+app.post("/new/account", (req, res) =>{
+    console.log(req.body.account)
+    res.redirect("/")
 })
 
 app.listen(port, () =>{
