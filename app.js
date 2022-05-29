@@ -24,8 +24,10 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
-  res.render("index");
+app.get("/", async (req, res) => {
+
+    const identities = await Account.find({})
+  res.render("index", {identities});
 });
 
 app.get("/new",  (req, res) => {
