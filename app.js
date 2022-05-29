@@ -30,6 +30,10 @@ app.get("/", (req, res)=>{
     res.render("index")
 })
 
+app.get("/new", (req, res) =>{
+    res.send("add new form")
+})
+
 app.listen(port, () =>{
     console.log("Server started...")
 })
