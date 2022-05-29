@@ -7,15 +7,18 @@ body {
   flex-direction: column;
   height: 100vh;
 }
+
 nav {
   background-color: white;
   height: 55px;
   max-width: 100%;
 }
+
 .log {
   position: relative;
   overflow: hidden;
 }
+
 .black {
   top: 2px;
   z-index: 100;
@@ -26,6 +29,7 @@ nav {
   border-radius: 50%;
   background-color: black;
 }
+
 .white {
   z-index: 50;
   position: absolute;
@@ -35,6 +39,7 @@ nav {
   background-color: brown;
   box-shadow: 2px 2px 3px black;
 }
+
 .title {
   letter-spacing: 0.5px;
   font-weight: 900;
@@ -45,11 +50,13 @@ nav {
 
   left: 50px;
 }
+
 .upper_container {
   margin-inline: auto;
 
-  max-width: 80%;
+  width: 80%;
 }
+
 .container_nav {
   margin-inline: auto;
   padding: 5px;
@@ -58,6 +65,7 @@ nav {
   flex-direction: row;
   height: fit-content;
 }
+
 .container {
   margin-top: 10px;
   background-color: white;
@@ -67,30 +75,37 @@ nav {
   padding: 10px;
   height: 350px;
 }
-.user{
+
+.user {
+  
+  padding: 2px;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-    border-radius: 4px;
-    height: 20px;
-    max-width: fit-content;
-    background: linear-gradient(to right,white,rgb(216, 216, 216));
+  border-radius: 4px;
+  height: 20px;
+  width: 95%;
+  background: linear-gradient(to right, white, rgb(216, 216, 216));
 }
-.user > div{
+
+.user>div {
   text-align: center;
-  border-left: 1px solid rgb(154, 154, 154);
-  min-width: 200px;
+  /* border-left: 1px solid rgb(177, 177, 177); */
+  /* min-width: 200px; */
 }
+
 h1 {
-  margin: 15px 0 5px 0;
+  margin: 15px 0 5px 55px;
 }
+
 footer {
   margin-top: auto;
   background-color: rgb(30, 30, 31);
   max-width: 100%;
   height: 55px;
 }
+
 .container_footer {
   margin-inline: auto;
   padding: 5px;
@@ -99,10 +114,10 @@ footer {
   flex-direction: row;
   height: fit-content;
 }
-h4{
-    margin: 4px;
-    color: whitesmoke;
+
+h4 {
+  margin: 4px;
+  color: whitesmoke;
 }
-.user > div{
-  
-}
+
+.user>div {}
