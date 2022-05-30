@@ -26,11 +26,11 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get("/", async (req, res) => {
 
-    const identities = await Account.find({})
-  res.render("index", {identities});
+  const identities = await Account.find({})
+  res.render("index", { identities });
 });
 
-app.get("/new",  (req, res) => {
+app.get("/new", (req, res) => {
   res.render("new");
 });
 
@@ -40,6 +40,21 @@ app.post("/new/account", async (req, res) => {
   await newIdentity.save()
   res.redirect("/");
 });
+
+app.get("/update/:id", async (req, res) => {
+  const { id } = req.params
+
+  const account = await Account.findOneById({ id: id })
+
+  res.render("edit", { account })
+})
+
+app.post("/account/:id/edit", async (req, res) => {
+const {id} = req.params
+
+const account = await Account.findByIdAndUpdate({id: id}, req.body.account, {new: true})
+
+})
 
 app.listen(port, () => {
   console.log("Server started...");
