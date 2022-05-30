@@ -41,19 +41,28 @@ app.post("/new/account", async (req, res) => {
   res.redirect("/");
 });
 
-app.get("/update/:id", async (req, res) => {
+app.get("/account/:id", async (req, res) => {
   const { id } = req.params
 
-  const account = await Account.findOneById({ id: id })
+  const account = await Account.findById({ id: id })
 
   res.render("edit", { account })
 })
 
 app.post("/account/:id/edit", async (req, res) => {
-const {id} = req.params
+  const { id } = req.params
 
-const account = await Account.findByIdAndUpdate({id: id}, req.body.account, {new: true})
+  const account = await Account.findByIdAndUpdate({ id: id }, req.body.account, { new: true })
 
+  await account.save()
+  res.redirect(`/account/${id}`)
+
+})
+
+app.delete("/account/:id", async (req, res) =>{
+  const {id} = req.params
+  await Account.findOneAndDelete({id: id})
+  res.redirect("/")
 })
 
 app.listen(port, () => {
