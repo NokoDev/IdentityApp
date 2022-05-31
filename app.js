@@ -44,7 +44,7 @@ app.post("/new/account", async (req, res) => {
 app.get("/account/:id", async (req, res) => {
   const { id } = req.params
 
-  const account = await Account.findById({ id: id })
+  const account = await Account.findById({ _id: id })
 
   res.render("edit", { account })
 })
@@ -52,10 +52,10 @@ app.get("/account/:id", async (req, res) => {
 app.post("/account/:id/edit", async (req, res) => {
   const { id } = req.params
 
-  const account = await Account.findByIdAndUpdate({ id: id }, req.body.account, { new: true })
+  const account = await Account.findByIdAndUpdate({ _id: id }, req.body.account, { new: true })
 
   await account.save()
-  res.redirect(`/account/${id}`)
+  res.redirect("/")
 
 })
 
