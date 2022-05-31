@@ -30,19 +30,23 @@
             </div>
             <div class="input_div">
                 <label for="title">Title: </label>
-                <input type="text" id="title" name="account[title]" value="<%=account.title%>" required> 
+                <input type="text" id="title" name="account[title]" value="<%=account.title%>" required>
             </div>
             <div class="input_div">
                 <label for="company">Company: </label>
-                <input type="text" id="company" name="account[company]" value="<%=account.company%>" required> 
+                <input type="text" id="company" name="account[company]" value="<%=account.company%>" required>
             </div>
             <div class="input_div">
                 <label for="location">Location: </label>
-                <input type="text" id="location" name="account[location]" value="<%=account.location%>" required> 
+                <input type="text" id="location" name="account[location]" value="<%=account.location%>" required>
             </div>
-            <button type="submit">Update Identity</button>
+            <button type="submit">Update</button>
         </form>
+        
         <button id="cancel"><a href="/">Cancel</a></button>
+        <form action="/account/<%=account._id%>?_method=DELETE" method="POST">
+            <button style="background-color: red;">Delete</button>
+        </form>
     </div>
 
     <footer>

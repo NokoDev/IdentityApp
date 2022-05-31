@@ -67,6 +67,7 @@ nav {
 }
 
 .container {
+  position: relative;
   margin-top: 10px;
   background-color: white;
   border-radius: 8px;
@@ -75,8 +76,12 @@ nav {
   padding: 10px;
   height: 350px;
   box-shadow: 1px 1px 3px grey;
+  overflow-y: auto;
 }
 .titles{
+  background-color: white;
+  top: 0;
+  position: sticky;
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
@@ -145,6 +150,7 @@ button{
   background-color: green;
   border: none;
   padding: 8px;
+  margin-bottom: 40px;
 }
 button:hover{
   box-shadow: 1px 1px 3px grey;
@@ -161,4 +167,21 @@ a{
   background-color: rgb(103, 103, 103);
   letter-spacing: 2px;
   padding: 2px 6px;
+  width: 35px;
+}
+#edit:hover{
+  background-color: black;
+  border-radius: 4px;
+}
+.update_buttons{
+  display: flex;
+margin-top: 4px;
+}
+.none{
+  border-top: 3px solid gray;
+  border-bottom: 3px solid gray;
+  text-align: center;
+  font-size: large;
+  letter-spacing: 1px;
+  color: crimson;
 }

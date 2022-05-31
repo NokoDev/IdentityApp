@@ -15,8 +15,11 @@ body{
     display: flex;
     flex-direction: column;
     max-width: 50%;
-    height: 40vh;
+  
     box-shadow: 1px 1px 4px grey;
+    height: fit-content;
+    margin-bottom: 40px;
+    box-sizing: border-box;
 }
 label{
     letter-spacing: 1px;
@@ -24,6 +27,7 @@ label{
 }
 button{
     font-weight: 600;
+    
     /* padding: 8px; */
     display: block;
     width: 70%;
@@ -33,7 +37,7 @@ button{
     color: white;
     background-color: green;
     letter-spacing: 1px;
-    /* margin-bottom: 4px; */
+    margin-bottom: 40px;
 }
 #cancel{
     margin-top: 2px;
@@ -134,3 +138,8 @@ input{
     margin: 4px;
     color: whitesmoke;
   }
+
+  .delete{
+    background-color: brown !important;
+    }
+    

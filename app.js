@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const ejs = require("ejs");
 const ejsMate = require("ejs-mate");
 const path = require("path");
+const methodOverride = require("method-override")
 
 const Account = require("./modules/user");
 
@@ -19,6 +20,7 @@ mongoose
   });
 
 app.engine("ejs", ejsMate);
+app.use(methodOverride("_method"))
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
@@ -41,6 +43,8 @@ app.post("/new/account", async (req, res) => {
   res.redirect("/");
 });
 
+
+
 app.get("/account/:id", async (req, res) => {
   const { id } = req.params
 
@@ -48,6 +52,8 @@ app.get("/account/:id", async (req, res) => {
 
   res.render("edit", { account })
 })
+
+
 
 app.post("/account/:id/edit", async (req, res) => {
   const { id } = req.params
@@ -60,10 +66,13 @@ app.post("/account/:id/edit", async (req, res) => {
 })
 
 app.delete("/account/:id", async (req, res) =>{
+  console.log("delete........")
   const {id} = req.params
-  await Account.findOneAndDelete({id: id})
+  await Account.findOneAndDelete({_id: id})
   res.redirect("/")
 })
+
+
 
 app.listen(port, () => {
   console.log("Server started...");

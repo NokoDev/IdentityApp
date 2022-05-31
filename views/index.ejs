@@ -17,7 +17,7 @@
                 <div class="white"></div>
             </div>
             <div class="title">Cyber ProX</div>
-            
+
         </div>
     </nav>
 
@@ -30,19 +30,36 @@
                 <div>Company</div>
                 <div>Location</div>
             </div>
-            <% for(let identity of identities) {%>
-            <div class="user">
-                <div><%=identity.cn%></div>
-                <div><%=identity.title%></div>
-                <div><%=identity.company%></div>
-                <div><%=identity.location%></div>
-                
-            </div>
-            <div>
-                <a id="edit" href="/account/<%=identity._id%>">Edit</a>
-            </div>
-            <hr>
-            <%}%>
+            <%if(identities.length==0){%>
+                <h5 class="none">No Accounts</h5>
+                <%}%>
+                    <% for(let identity of identities) {%>
+                        <div class="user">
+                            <div>
+                                <%=identity.cn%>
+                            </div>
+                            <div>
+                                <%=identity.title%>
+                            </div>
+                            <div>
+                                <%=identity.company%>
+                            </div>
+                            <div>
+                                <%=identity.location%>
+                            </div>
+
+                        </div>
+                        <div class="update_buttons">
+                            <a id="edit" href="/account/<%=identity._id%>">Edit</a>
+                            <!-- <div>
+                    <form action="/account/:id/delete" method="DELETE">
+                        <button type="submit" class="delete_but">Delete</button>
+                    </form>
+                </div> -->
+                        </div>
+
+                        <hr>
+                        <%}%>
         </div>
     </div>
     <button><a href="/new">Add New</a></button>
